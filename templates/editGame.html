@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+
+<form class="form-inline" action="/edit/{{game.id}}" method="post">
+
+	 <input type="text" name="name" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" value="{{game.name}}">
+
+	 <input type="text" name="Developer" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" value="{{game.Developer}}">
+
+	 <input type="text" name="publisher" class="form-control" id="inlineFormInputGroupUsername2" value="{{game.publisher}}">
+
+	 <textarea name="desp"  >{{game.desp}}</textarea>
+
+	 <button type="submit" class="btn btn-primary mb-2">Submit</button>
+
+</form>
+
+{% endblock %}

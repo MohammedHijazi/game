@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+	<h1>add here</h1>
+
+<form class="form-inline" action="/addGame" method="post">
+
+	 <input type="text" name="name" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Game's Name">
+
+	 <input type="text" name="Developer" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Developer">
+
+	 <input type="text" name="publisher" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Publisher">
+
+	 <textarea name="desp"></textarea>
+
+	 <button type="submit" class="btn btn-primary mb-2">Submit</button>
+
+</form>
+
+{% endblock %}

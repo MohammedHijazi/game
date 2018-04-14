@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<a href="/addGame">Add New Game</a>
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">GameId</th>
+      <th scope="col">Games'Names</th>
+      <th scope="col">More Details</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+    {% for game in Games %}
+    <tbody>
+    <tr>
+      <th scope="col">#</th>
+
+      <td>{{game.id}}</td>
+      <td>{{game.name}}</td>
+      <td>
+        <form action="/showMore/{{game.id}}">
+          <button type="submit"> Show More</button>
+        </form>
+      </td>
+
+      
+      <td>
+        <form action="/edit/{{game.id}}">
+          <input type="submit" value="edit">
+        </form>
+      </td>
+    </tr>
+    <td>
+        <form method="post" action="/delete/{{game.id}}">
+          <input type="submit" value="delete">
+        </form>
+      </td>
+
+  </tbody>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
+
+
